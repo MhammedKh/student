@@ -10,6 +10,7 @@ class student_student(osv.osv):
          'cin': fields.integer('CIN', size=8, required=True),
          'datenaiss': fields.date('Date Naissance',required=True),
          'departement_id':fields.many2one('student.departement','Departement',required=True),
+		 'club_ids':fields.many2many('student.club',string='Liste clubs'),
 
     }
 student_student()
@@ -44,4 +45,4 @@ class student_club(osv.osv):
          'designation': fields.char('Designation', size=64, required=True),
          'student_ids':fields.many2many('student.student',string='Liste Etudiant'),       
     }
-student_hhhhhhhhhhh()
+student_club()
