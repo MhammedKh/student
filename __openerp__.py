@@ -29,7 +29,7 @@
     'depends': ['base'],
     'data': ['student_view.xml','departement_view.xml','club_view.xml'],
     'demo': [],
-    'installable': True,
+    'installable': gggg,
     'auto_install': False,
     'images': [],
 }

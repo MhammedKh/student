@@ -42,6 +42,6 @@ class student_club(osv.osv):
     _columns={
          'code': fields.char('Code', size=3, required=True,select=True),
          'designation': fields.char('Designation', size=64, required=True),
-         'student_ids':fields.many2many('student.st',string='Liste Etudiant'),       
+         'student_ids':fields.many2many('student.student',string='Liste Etudiant'),       
     }
 student_club()
