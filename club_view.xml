@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+  
+      <record model="ir.ui.view" id="view_club_form">
+        <field name="name">club.form</field>
+        <field name="model">student.club</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="club">
+                <group colspan="2" col="2">
+                    <field name="code"/> 
+                    <field name="designation"/> 
+                    <field name="student_ids" widget='many2many'/> 
+	                          
+                </group>
+               
+            </form>
+        </field>
+      </record>
+
+    <record model="ir.ui.view" id="view_club_tree">
+        <field name="name"> club.list</field>
+        <field name="model">student.club</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="club List">
+		<field name="code"/> 
+                <field name="designation"/> 
+               
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_club">
+        <field name="name">club</field>
+        <field name="res_model">student.club</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+ 
+    <menuitem name="club" id="club_menu" parent="iit_menu_sub" action="action_club"/>
+    </data>
+</openerp>
+    

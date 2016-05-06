@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+  
+      <record model="ir.ui.view" id="view_departement_form">
+        <field name="name">departement.form</field>
+        <field name="model">student.departement</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Departement">
+                <group colspan="2" col="2">
+                    <field name="code"/> 
+                    <field name="designation"/> 
+                    <field name="tot_student"/> 
+                    <field name="student_ids" widget='one2many_list'/> 
+	                          
+                </group>
+               
+            </form>
+        </field>
+      </record>
+
+    <record model="ir.ui.view" id="view_departement_tree">
+        <field name="name"> departement.list</field>
+        <field name="model">student.departement</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Departement List">
+				<field name="code"/> 
+                <field name="designation"/> 
+               
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_departement">
+        <field name="name">departement</field>
+        <field name="res_model">student.departement</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+ 
+    <menuitem name="Departement" id="departement_menu" parent="iit_menu_sub" action="action_departement"/>
+    </data>
+</openerp>
+    

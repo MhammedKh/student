@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+  
+      <record model="ir.ui.view" id="view_student_form">
+        <field name="name">student.form</field>
+        <field name="model">student.student</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Student">
+                <group colspan="2" col="2">
+                    <field name="nom"/> 
+                    <field name="prenom"/> 
+					<field name="cin"/> 
+                   <field name="datenaiss"/> 
+				    <field name="departement_id"/>                                      
+                </group>
+               
+            </form>
+        </field>
+      </record>
+
+    <record model="ir.ui.view" id="view_student_tree">
+        <field name="name">student List</field>
+        <field name="model">student.student</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Student List">
+				<field name="cin"/> 
+                <field name="nom"/> 
+                <field name="prenom"/>
+               
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_student">
+        <field name="name">Student</field>
+        <field name="res_model">student.student</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+  
+    <menuitem name="IIT" id="iit_menu" />
+	<menuitem name="IIT" id="iit_menu_sub" parent="iit_menu" />
+    <menuitem name="Student" id="student_menu" parent="iit_menu_sub" action="action_student"/>
+    </data>
+</openerp>
+    
