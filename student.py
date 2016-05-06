@@ -44,4 +44,4 @@ class student_club(osv.osv):
          'designation': fields.char('Designation', size=64, required=True),
          'student_ids':fields.many2many('student.student',string='Liste Etudiant'),       
     }
-student_club()
+student_hhhhhhhhhhh()
