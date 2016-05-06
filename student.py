@@ -29,7 +29,7 @@ class student_departement(osv.osv):
 
     _rec_name='designation'
     _columns={
-         'code': fields.char('Code', size=3, required=True,select=True,ddddd=false),
+         'code': fields.char('Code', size=3, required=True,select=True),
          'designation': fields.char('Designation', size=64, required=True),
          'student_ids':fields.one2many('student.student','departement_id','Liste Etudiant',readonly=True),       
          'tot_student': fields.function(_get_student,multi="progress", string="Student Number"),
@@ -42,6 +42,6 @@ class student_club(osv.osv):
     _columns={
          'code': fields.char('Code', size=3, required=True,select=True),
          'designation': fields.char('Designation', size=64, required=True),
-         'student_ids':fields.many2many('student.student',string='Liste Etudiant'),       
+         'student_ids':fields.many2many('student.st',string='Liste Etudiant'),       
     }
 student_club()
